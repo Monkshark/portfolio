@@ -62,11 +62,9 @@ export default function Component() {
                 <div className="text-2xl font-bold text-gray-800 dark:text-white font-[NIXGONM-vb]">추희도 포트폴리오</div>
                 <nav className="space-x-4">
                     <LinkCard to="About"/>
-
                     <LinkCard to="Skills"/>
                     <LinkCard to="Results"/>
                     <LinkCard to="Contact"/>
-
                 </nav>
             </header>
 
@@ -93,7 +91,7 @@ export default function Component() {
                     <div className="flex flex-col items-start text-left">
                         {Introduction.split('\n').map((paragraph, index) => (
                             <p key={index}
-                                className="text-gray-600 dark:text-gray-300 text-left font-[NIXGONM-Vb]">{paragraph}</p>
+                                className="text-gray-600 dark:text-gray-300 text-left text-xs font-[NIXGONM-Vb]">{paragraph}</p>
                         ))}
                     </div>
                 </div>

@@ -20,12 +20,13 @@ import {
     PugLogo,
     PythonLogo,
     ReactLogo,
+    ReactNativeLogo,
     RustLogo,
     SCSSLogo,
     SpringBootLogo,
     TailWIndCSSLogo,
     TypeScriptLogo,
-    VueLogo
+    VueLogo,
 } from "./Images";
 
 export class Skill {
@@ -160,6 +161,12 @@ export const ReactSkill = new Skill({
     skill: "React",
     src: ReactLogo,
     alt: "React"
+});
+
+export const ReactNativeSkill = new Skill({
+    skill: "React Native",
+    src: ReactNativeLogo,
+    alt: "React Native"
 });
 
 export const RustSkill = new Skill({
