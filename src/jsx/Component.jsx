@@ -2,21 +2,41 @@ import {profile} from '../js/Images.js';
 import React, { useState } from 'react';
 import '../css/Component.css';
 import { Link } from 'react-scroll';
-import {Email, Greeting, Instagram, Introduction, Phone} from "../js/Texts.js"
+import {Greeting, Introduction} from "../texts/introduce";
+import {Email, Instagram, Phone} from"../texts/contact.js";
 import {
     AndroidSkill,
     AngularSkill,
     CSharpSkill,
-    CSSSkill, DartSkill, FirebaseSkill,
-    FlutterSkill, GithubSkill, GitSkill, GoLangSkill,
+    CSSSkill,
+    DartSkill,
+    FirebaseSkill,
+    FlutterSkill,
+    GithubSkill,
+    GitSkill,
+    GoLangSkill,
     HTMLSkill,
     JavaScriptSkill,
-    JavaSkill, KotlinSkill, MarkDownSkill, MongoDBSkill, MySQLSkill, NodeJSSkill, PhpSkill, PugSkill,
-    PythonSkill, ReactNativeSkill,
-    ReactSkill, RustSkill, SCSSSkill,
-    SpringBootSkill, TailWindCSSSkill, TypeScriptSkill, VueSkill, XMLSkill
+    JavaSkill,
+    KotlinSkill,
+    MarkDownSkill,
+    MongoDBSkill,
+    MySQLSkill,
+    NodeJSSkill,
+    PhpSkill,
+    PugSkill,
+    PythonSkill,
+    ReactNativeSkill,
+    ReactSkill,
+    RustSkill,
+    SCSSSkill,
+    SpringBootSkill,
+    TailWindCSSSkill,
+    TypeScriptSkill,
+    VueSkill,
+    XMLSkill
 } from "../js/Skills";
-
+import {Result1, Result2} from "../js/Results";
 
 
 function SkillCard({ skillObject }) {
@@ -39,7 +59,12 @@ function SkillCard({ skillObject }) {
             </div>
             {showTooltip && (
                 <div className="tooltip">
-                    {skillObject.description}
+                    {skillObject.description.split('\n').map((line, index) => (
+                        <React.Fragment key={index}>
+                            {line}
+                            <br/>
+                        </React.Fragment>
+                    ))}
                 </div>
             )}
         </div>
@@ -68,13 +93,13 @@ function ContactCard({ title, description }) {
     );
 }
 
-function ProjectCard({ title, description, skills }) {
+function ResultCard({ result }) {
     return (
         <div className="mx-auto max-w-md rounded-lg bg-white dark:bg-gray-800 shadow-md p-4">
-            <h3 className="text-xl font-bold text-gray-800 dark:text-white">{title}</h3>
-            <p className="text-gray-600 dark:text-gray-300 mt-2">{description}</p>
+            <h3 className="text-xl font-bold text-gray-800 dark:text-white">{result.title}</h3>
+            <p className="text-gray-600 dark:text-gray-300 mt-2">{result.description}</p>
             <h4 className="mt-2 text-lg font-bold text-gray-800 dark:text-white">Skills Used:</h4>
-            <p className="text-gray-600 dark:text-gray-300">{skills}</p>
+            <p className="text-gray-600 dark:text-gray-300">{result.skills}</p>
         </div>
     );
 }
@@ -181,15 +206,11 @@ export default function Component() {
             >
                 <h2 className="text-4xl font-bold text-gray-800 dark:text-white">Results</h2>
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <ProjectCard
-                        title="Project 1"
-                        description="A brief description of the project, its purpose, and the technologies used."
-                        skills="JavaScript, React, Node.js"
+                    <ResultCard
+                        result={Result1}
                     />
-                    <ProjectCard
-                        title="Project 2"
-                        description="A brief description of the project, its purpose, and the technologies used."
-                        skills="Python, Flutter, PostgreSQL"
+                    <ResultCard
+                        result={Result2}
                     />
                 </div>
             </section>

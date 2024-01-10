@@ -61,7 +61,7 @@ import {
     TypeScriptDescription,
     XMLDescription,
     VueDescription,
-} from "./Texts";
+} from "../texts/description";
 
 export class Skill {
     constructor({ skill, src, alt, description }) {
