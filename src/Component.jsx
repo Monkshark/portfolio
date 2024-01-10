@@ -1,4 +1,6 @@
 import {profile} from './Images.js';
+import React, { useState } from 'react';
+import './Component.css';
 import { Link } from 'react-scroll';
 import {Email, Greeting, Instagram, Introduction, Phone} from "./Texts.js"
 import {
@@ -16,9 +18,17 @@ import {
 } from "./Skills";
 
 
+
 function SkillCard({ skillObject }) {
+    const [showTooltip, setShowTooltip] = useState(false);
+
     return (
-        <div className="relative group hover:bg-gray-800 transition-colors duration-200 rounded-lg" title={skillObject.description}>
+        <div
+            onMouseEnter={() => setShowTooltip(true)}
+            onMouseLeave={() => setShowTooltip(false)}
+            className="relative group hover:bg-gray-800 transition-colors duration-200 rounded-lg"
+            title={skillObject.description}
+        >
             <img
                 alt={skillObject.alt}
                 className="w-24 h-24 object-cover rounded-lg group-hover:opacity-50 transition-opacity duration-200 mx-auto"
@@ -27,6 +37,11 @@ function SkillCard({ skillObject }) {
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                 <h3 className="text-base font-bold text-white text-center">{skillObject.skill}</h3>
             </div>
+            {showTooltip && (
+                <div className="tooltip">
+                    {skillObject.description}
+                </div>
+            )}
         </div>
     );
 }
@@ -117,48 +132,48 @@ export default function Component() {
                 <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Language</h3>
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-8">
                     <SkillCard skillObject={HTMLSkill}/>
-                    {/*<SkillCard skillObject={CSSSkill}/>*/}
-                    {/*<SkillCard skillObject={JavaScriptSkill}/>*/}
-                    {/*<SkillCard skillObject={TypeScriptSkill}/>*/}
-                    {/*<SkillCard skillObject={PythonSkill}/>*/}
-                    {/*<SkillCard skillObject={JavaSkill}/>*/}
-                    {/*<SkillCard skillObject={KotlinSkill}/>*/}
-                    {/*<SkillCard skillObject={RustSkill}/>*/}
-                    {/*<SkillCard skillObject={GoLangSkill}/>*/}
-                    {/*<SkillCard skillObject={PhpSkill}/>*/}
-                    {/*<SkillCard skillObject={DartSkill}/>*/}
-                    {/*<SkillCard skillObject={CSharpSkill}/>*/}
-                    {/*<SkillCard skillObject={MarkDownSkill}/>*/}
-                    {/*<SkillCard skillObject={XMLSkill}/>*/}
+                    <SkillCard skillObject={CSSSkill}/>
+                    <SkillCard skillObject={JavaScriptSkill}/>
+                    <SkillCard skillObject={TypeScriptSkill}/>
+                    <SkillCard skillObject={PythonSkill}/>
+                    <SkillCard skillObject={JavaSkill}/>
+                    <SkillCard skillObject={KotlinSkill}/>
+                    <SkillCard skillObject={RustSkill}/>
+                    <SkillCard skillObject={GoLangSkill}/>
+                    <SkillCard skillObject={PhpSkill}/>
+                    <SkillCard skillObject={DartSkill}/>
+                    <SkillCard skillObject={CSharpSkill}/>
+                    <SkillCard skillObject={MarkDownSkill}/>
+                    <SkillCard skillObject={XMLSkill}/>
                 </div>
 
-                {/*<h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Library / Framework</h3>*/}
-                {/*<div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-8">*/}
-                {/*    <SkillCard skillObject={ReactSkill}/>*/}
-                {/*    <SkillCard skillObject={AngularSkill}/>*/}
-                {/*    <SkillCard skillObject={VueSkill}/>*/}
-                {/*    <SkillCard skillObject={FlutterSkill}/>*/}
-                {/*    <SkillCard skillObject={AndroidSkill}/>*/}
-                {/*    <SkillCard skillObject={SpringBootSkill}/>*/}
-                {/*    <SkillCard skillObject={ReactNativeSkill}/>*/}
-                {/*    <SkillCard skillObject={PugSkill}/>*/}
-                {/*    <SkillCard skillObject={SCSSSkill}/>*/}
-                {/*    <SkillCard skillObject={TailWindCSSSkill}/>*/}
-                {/*</div>*/}
+                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Library / Framework</h3>
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-8">
+                    <SkillCard skillObject={ReactSkill}/>
+                    <SkillCard skillObject={AngularSkill}/>
+                    <SkillCard skillObject={VueSkill}/>
+                    <SkillCard skillObject={FlutterSkill}/>
+                    <SkillCard skillObject={AndroidSkill}/>
+                    <SkillCard skillObject={SpringBootSkill}/>
+                    <SkillCard skillObject={ReactNativeSkill}/>
+                    <SkillCard skillObject={PugSkill}/>
+                    <SkillCard skillObject={SCSSSkill}/>
+                    <SkillCard skillObject={TailWindCSSSkill}/>
+                </div>
 
-                {/*<h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Server & Database</h3>*/}
-                {/*<div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">*/}
-                {/*    <SkillCard skillObject={FirebaseSkill}/>*/}
-                {/*    <SkillCard skillObject={MySQLSkill}/>*/}
-                {/*    <SkillCard skillObject={MongoDBSkill}/>*/}
-                {/*</div>*/}
+                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Server & Database</h3>
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <SkillCard skillObject={FirebaseSkill}/>
+                    <SkillCard skillObject={MySQLSkill}/>
+                    <SkillCard skillObject={MongoDBSkill}/>
+                </div>
 
-                {/*<h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">etc</h3>*/}
-                {/*<div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">*/}
-                {/*    <SkillCard skillObject={NodeJSSkill}/>*/}
-                {/*    <SkillCard skillObject={GitSkill}/>*/}
-                {/*    <SkillCard skillObject={GithubSkill}/>*/}
-                {/*</div>*/}
+                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">etc</h3>
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <SkillCard skillObject={NodeJSSkill}/>
+                    <SkillCard skillObject={GitSkill}/>
+                    <SkillCard skillObject={GithubSkill}/>
+                </div>
             </section>
             <section
                 className="flex flex-col items-center justify-center py-20 bg-gray-100 dark:bg-gray-900 rounded-lg"

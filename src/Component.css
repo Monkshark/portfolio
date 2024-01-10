@@ -1,0 +1,20 @@
+.skill-card {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    text-align: right;
+    transition: opacity 0.3s ease-in-out;
+    white-space: nowrap;
+    min-width: max-content;
+    z-index: 9999;
+}
