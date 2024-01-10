@@ -1,4 +1,4 @@
-export const AndroidDescription = "Android 개발을 하는데 필요한 전문적인 지식을 가지고 있습니다. \nAndroid Studio를 이용하여 앱을 개발할 수 있습니다. \n또한, 서버와 연동하여 데이터베이스를 구축할 수 있습니다. \nGoogle Play Store에 앱을 배포할 수 있습니다.";
+export const AndroidDescription = "Android 개발을 하는데 필요한 전문적인 지식을 가지고 있습니다. \nAndroid Studio를 이용하여 앱을 개발할 수 있습니다. \n또한, 서버와 연동하여 데이터베이스를 구축할 수 있습니다. \nGoogle Play Store에 앱을 배포할 수 있습니다. \n Google play API를 이용해 수익을 창출해낼수 있습니다";
 export const AngularDescription = "Angular.js를 이용하여 웹사이트의 프론트엔드를 개발할 수 있습니다.";
 export const CSSDescription = "CSS를 이용하여 HTML의 웹사이트의 스타일을 적용해 꾸밀 수 있습니다.";
 export const CSharpDescription = "C#을 이용하여 Windows Form을 구축하고 만들 수 있습니다.";
