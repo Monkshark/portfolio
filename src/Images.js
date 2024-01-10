@@ -27,3 +27,5 @@ export const VueLogo = "https://www.vectorlogo.zone/logos/vuejs/vuejs-icon.svg";
 export const PhpLogo = "https://www.vectorlogo.zone/logos/php/php-icon.svg";
 export const CSharpLogo = "https://logojinni.com/image/logos/c--4.svg";
 export const ReactNativeLogo = "https://cdn.worldvectorlogo.com/logos/react-native-1.svg";
+export const XMLLogo = "https://www.svgrepo.com/show/31053/xml.svg";
+export const MarkDownLogo = "https://www.vectorlogo.zone/logos/markdown-here/markdown-here-icon.svg";

@@ -9,23 +9,23 @@ import {
     FlutterSkill, GithubSkill, GitSkill, GoLangSkill,
     HTMLSkill,
     JavaScriptSkill,
-    JavaSkill, KotlinSkill, MongoDBSkill, MySQLSkill, NodeJSSkill, PhpSkill, PugSkill,
+    JavaSkill, KotlinSkill, MarkDownSkill, MongoDBSkill, MySQLSkill, NodeJSSkill, PhpSkill, PugSkill,
     PythonSkill, ReactNativeSkill,
     ReactSkill, RustSkill, SCSSSkill,
-    SpringBootSkill, TailWindCSSSkill, TypeScriptSkill, VueSkill
+    SpringBootSkill, TailWindCSSSkill, TypeScriptSkill, VueSkill, XMLSkill
 } from "./Skills";
 
 
 function SkillCard({ skillObject }) {
     return (
-        <div className="relative group hover:bg-gray-800 transition-colors duration-200 rounded-lg">
+        <div className="relative group hover:bg-gray-800 transition-colors duration-200 rounded-lg" title={skillObject.description}>
             <img
                 alt={skillObject.alt}
                 className="w-24 h-24 object-cover rounded-lg group-hover:opacity-50 transition-opacity duration-200 mx-auto"
                 src={skillObject.src}
             />
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                <h3 className="text-base font-bold text-white">{skillObject.skill}</h3>
+                <h3 className="text-base font-bold text-white text-center">{skillObject.skill}</h3>
             </div>
         </div>
     );
@@ -53,7 +53,7 @@ function ContactCard({ title, description }) {
     );
 }
 
-function ProjectCard({title, description, skills}) {
+function ProjectCard({ title, description, skills }) {
     return (
         <div className="mx-auto max-w-md rounded-lg bg-white dark:bg-gray-800 shadow-md p-4">
             <h3 className="text-xl font-bold text-gray-800 dark:text-white">{title}</h3>
@@ -114,49 +114,51 @@ export default function Component() {
                 id="skills"
             >
                 <h2 className="text-3xl font-bold text-gray-800 dark:text-white">Programming Skills</h2>
-                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Languages</h3>
+                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Language</h3>
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-8">
                     <SkillCard skillObject={HTMLSkill}/>
-                    <SkillCard skillObject={CSSSkill}/>
-                    <SkillCard skillObject={JavaScriptSkill}/>
-                    <SkillCard skillObject={TypeScriptSkill}/>
-                    <SkillCard skillObject={PythonSkill}/>
-                    <SkillCard skillObject={JavaSkill}/>
-                    <SkillCard skillObject={KotlinSkill}/>
-                    <SkillCard skillObject={RustSkill}/>
-                    <SkillCard skillObject={GoLangSkill}/>
-                    <SkillCard skillObject={PhpSkill}/>
-                    <SkillCard skillObject={DartSkill}/>
-                    <SkillCard skillObject={CSharpSkill}/>
+                    {/*<SkillCard skillObject={CSSSkill}/>*/}
+                    {/*<SkillCard skillObject={JavaScriptSkill}/>*/}
+                    {/*<SkillCard skillObject={TypeScriptSkill}/>*/}
+                    {/*<SkillCard skillObject={PythonSkill}/>*/}
+                    {/*<SkillCard skillObject={JavaSkill}/>*/}
+                    {/*<SkillCard skillObject={KotlinSkill}/>*/}
+                    {/*<SkillCard skillObject={RustSkill}/>*/}
+                    {/*<SkillCard skillObject={GoLangSkill}/>*/}
+                    {/*<SkillCard skillObject={PhpSkill}/>*/}
+                    {/*<SkillCard skillObject={DartSkill}/>*/}
+                    {/*<SkillCard skillObject={CSharpSkill}/>*/}
+                    {/*<SkillCard skillObject={MarkDownSkill}/>*/}
+                    {/*<SkillCard skillObject={XMLSkill}/>*/}
                 </div>
 
-                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Librarys / Frameworks</h3>
-                <div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-8">
-                    <SkillCard skillObject={ReactSkill}/>
-                    <SkillCard skillObject={AngularSkill}/>
-                    <SkillCard skillObject={VueSkill}/>
-                    <SkillCard skillObject={FlutterSkill}/>
-                    <SkillCard skillObject={AndroidSkill}/>
-                    <SkillCard skillObject={SpringBootSkill}/>
-                    <SkillCard skillObject={ReactNativeSkill}/>
-                    <SkillCard skillObject={PugSkill}/>
-                    <SkillCard skillObject={SCSSSkill}/>
-                    <SkillCard skillObject={TailWindCSSSkill}/>
-                </div>
+                {/*<h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Library / Framework</h3>*/}
+                {/*<div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-8">*/}
+                {/*    <SkillCard skillObject={ReactSkill}/>*/}
+                {/*    <SkillCard skillObject={AngularSkill}/>*/}
+                {/*    <SkillCard skillObject={VueSkill}/>*/}
+                {/*    <SkillCard skillObject={FlutterSkill}/>*/}
+                {/*    <SkillCard skillObject={AndroidSkill}/>*/}
+                {/*    <SkillCard skillObject={SpringBootSkill}/>*/}
+                {/*    <SkillCard skillObject={ReactNativeSkill}/>*/}
+                {/*    <SkillCard skillObject={PugSkill}/>*/}
+                {/*    <SkillCard skillObject={SCSSSkill}/>*/}
+                {/*    <SkillCard skillObject={TailWindCSSSkill}/>*/}
+                {/*</div>*/}
 
-                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Servers</h3>
-                <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <SkillCard skillObject={FirebaseSkill}/>
-                    <SkillCard skillObject={MySQLSkill}/>
-                    <SkillCard skillObject={MongoDBSkill}/>
-                </div>
+                {/*<h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Server & Database</h3>*/}
+                {/*<div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">*/}
+                {/*    <SkillCard skillObject={FirebaseSkill}/>*/}
+                {/*    <SkillCard skillObject={MySQLSkill}/>*/}
+                {/*    <SkillCard skillObject={MongoDBSkill}/>*/}
+                {/*</div>*/}
 
-                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">etc</h3>
-                <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <SkillCard skillObject={NodeJSSkill}/>
-                    <SkillCard skillObject={GitSkill}/>
-                    <SkillCard skillObject={GithubSkill}/>
-                </div>
+                {/*<h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">etc</h3>*/}
+                {/*<div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">*/}
+                {/*    <SkillCard skillObject={NodeJSSkill}/>*/}
+                {/*    <SkillCard skillObject={GitSkill}/>*/}
+                {/*    <SkillCard skillObject={GithubSkill}/>*/}
+                {/*</div>*/}
             </section>
             <section
                 className="flex flex-col items-center justify-center py-20 bg-gray-100 dark:bg-gray-900 rounded-lg"

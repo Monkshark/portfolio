@@ -13,6 +13,7 @@ import {
     JavaLogo,
     JavaScriptLogo,
     KotlinLogo,
+    MarkDownLogo,
     MongoDBLogo,
     MySQLLogo,
     NodeJSLogo,
@@ -27,6 +28,7 @@ import {
     TailWIndCSSLogo,
     TypeScriptLogo,
     VueLogo,
+    XMLLogo,
 } from "./Images";
 
 export class Skill {
@@ -44,9 +46,9 @@ export const AndroidSkill = new Skill({
 });
 
 export const AngularSkill = new Skill({
-    skill: "Angular",
+    skill: "Angular.js",
     src: AngularLogo,
-    alt: "Angular"
+    alt: "Angular.js"
 });
 
 export const CSSSkill = new Skill({
@@ -100,7 +102,7 @@ export const GoLangSkill = new Skill({
 export const HTMLSkill = new Skill({
     skill: "HTML",
     src: HTMLLogo,
-    alt: "HTML"
+    alt: "HTML",
 });
 
 export const JavaSkill = new Skill({
@@ -119,6 +121,12 @@ export const KotlinSkill = new Skill({
     skill: "Kotlin",
     src: KotlinLogo,
     alt: "Kotlin"
+});
+
+export const MarkDownSkill = new Skill({
+    skill: "MarkDown",
+    src: MarkDownLogo,
+    alt: "MarkDown"
 });
 
 export const MongoDBSkill = new Skill({
@@ -158,9 +166,9 @@ export const PythonSkill = new Skill({
 });
 
 export const ReactSkill = new Skill({
-    skill: "React",
+    skill: "React.js",
     src: ReactLogo,
-    alt: "React"
+    alt: "React.js"
 });
 
 export const ReactNativeSkill = new Skill({
@@ -200,7 +208,13 @@ export const TypeScriptSkill = new Skill({
 });
 
 export const VueSkill = new Skill({
-    skill: "Vue",
+    skill: "Vue.js",
     src: VueLogo,
-    alt: "Vue"
+    alt: "Vue.js"
+});
+
+export const XMLSkill = new Skill({
+    skill: "XML",
+    src: XMLLogo,
+    alt: "XML"
 });

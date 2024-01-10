@@ -3,3 +3,4 @@ export const Result = ({ title, description, skills }) => {
     this.description = description;
     this.skills = skills;
 }
+
