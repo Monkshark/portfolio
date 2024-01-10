@@ -1,8 +1,8 @@
-import {profile} from './Images.js';
+import {profile} from '../js/Images.js';
 import React, { useState } from 'react';
-import './Component.css';
+import '../css/Component.css';
 import { Link } from 'react-scroll';
-import {Email, Greeting, Instagram, Introduction, Phone} from "./Texts.js"
+import {Email, Greeting, Instagram, Introduction, Phone} from "../js/Texts.js"
 import {
     AndroidSkill,
     AngularSkill,
@@ -15,7 +15,7 @@ import {
     PythonSkill, ReactNativeSkill,
     ReactSkill, RustSkill, SCSSSkill,
     SpringBootSkill, TailWindCSSSkill, TypeScriptSkill, VueSkill, XMLSkill
-} from "./Skills";
+} from "../js/Skills";
 
 
 

@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import Component from "./Component";
+import Component from "./jsx/Component";
 
 function App() {
   return (
