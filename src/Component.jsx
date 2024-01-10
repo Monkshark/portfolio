@@ -1,7 +1,19 @@
 import {profile} from './Images.js';
 import { Link } from 'react-scroll';
 import {Email, Greeting, Instagram, Introduction, Phone} from "./Texts.js"
-import {FlutterSkill, JavaScriptSkill, JavaSkill, PythonSkill, ReactSkill, SpringBootSkill} from "./Skills";
+import {
+    AndroidSkill,
+    AngularSkill,
+    CSharpSkill,
+    CSSSkill, DartSkill, FirebaseSkill,
+    FlutterSkill, GithubSkill, GitSkill, GoLangSkill,
+    HTMLSkill,
+    JavaScriptSkill,
+    JavaSkill, KotlinSkill, MongoDBSkill, MySQLSkill, NodeJSSkill, PhpSkill, PugSkill,
+    PythonSkill, ReactNativeSkill,
+    ReactSkill, RustSkill, SCSSSkill,
+    SpringBootSkill, TailWindCSSSkill, TypeScriptSkill, VueSkill
+} from "./Skills";
 
 
 function SkillCard({ skillObject }) {
@@ -76,7 +88,7 @@ export default function Component() {
                 <div className="mt-8 flex items-start">
                     <div className="flex flex-col items-center text-left mr-8 px-28">
                         <img
-                            alt="Profile Picture"
+                            alt="Profile"
                             className="w-48 h-48 rounded-full object-cover mb-12"
                             height="200"
                             src={profile}
@@ -103,20 +115,47 @@ export default function Component() {
             >
                 <h2 className="text-3xl font-bold text-gray-800 dark:text-white">Programming Skills</h2>
                 <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Languages</h3>
-                <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-8">
+                    <SkillCard skillObject={HTMLSkill}/>
+                    <SkillCard skillObject={CSSSkill}/>
                     <SkillCard skillObject={JavaScriptSkill}/>
+                    <SkillCard skillObject={TypeScriptSkill}/>
                     <SkillCard skillObject={PythonSkill}/>
                     <SkillCard skillObject={JavaSkill}/>
+                    <SkillCard skillObject={KotlinSkill}/>
+                    <SkillCard skillObject={RustSkill}/>
+                    <SkillCard skillObject={GoLangSkill}/>
+                    <SkillCard skillObject={PhpSkill}/>
+                    <SkillCard skillObject={DartSkill}/>
+                    <SkillCard skillObject={CSharpSkill}/>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Frameworks</h3>
-                <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Librarys / Frameworks</h3>
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-8">
                     <SkillCard skillObject={ReactSkill}/>
+                    <SkillCard skillObject={AngularSkill}/>
+                    <SkillCard skillObject={VueSkill}/>
                     <SkillCard skillObject={FlutterSkill}/>
+                    <SkillCard skillObject={AndroidSkill}/>
                     <SkillCard skillObject={SpringBootSkill}/>
+                    <SkillCard skillObject={ReactNativeSkill}/>
+                    <SkillCard skillObject={PugSkill}/>
+                    <SkillCard skillObject={SCSSSkill}/>
+                    <SkillCard skillObject={TailWindCSSSkill}/>
                 </div>
+
+                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Servers</h3>
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <SkillCard skillObject={FirebaseSkill}/>
+                    <SkillCard skillObject={MySQLSkill}/>
+                    <SkillCard skillObject={MongoDBSkill}/>
+                </div>
+
                 <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">etc</h3>
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <></>
+                    <SkillCard skillObject={NodeJSSkill}/>
+                    <SkillCard skillObject={GitSkill}/>
+                    <SkillCard skillObject={GithubSkill}/>
                 </div>
             </section>
             <section

@@ -7,7 +7,8 @@
     <list default="true" id="c9578c40-0f6f-41f7-9f44-baf9bb08c371" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Texts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Texts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skills.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1704707548115</updated>
-      <workItem from="1704707555092" duration="27336000" />
+      <workItem from="1704707555092" duration="31317000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -101,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704800355104</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit">
+      <option name="closed" value="true" />
+      <created>1704802315315</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704802315315</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -200,7 +200,7 @@ export const TypeScriptSkill = new Skill({
 });
 
 export const VueSkill = new Skill({
-    skill: "Vue.js",
+    skill: "Vue",
     src: VueLogo,
-    alt: "Vue.js"
+    alt: "Vue"
 });
