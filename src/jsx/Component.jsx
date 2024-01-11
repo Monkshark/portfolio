@@ -1,5 +1,5 @@
 import {profile} from '../js/Images.js';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import '../css/Component.css';
 import { Link } from 'react-scroll';
 import {Greeting, Introduction} from "../texts/introduce";

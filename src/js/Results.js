@@ -1,5 +1,5 @@
 import {SchoolSyncDescription} from "../texts/resultText";
-import {SchoolSync1} from "./Images";
+import {SchoolSyncImg1} from "./Images";
 
 export class Result {
     constructor({ title, description, skills, imageSrc }) {
@@ -14,7 +14,7 @@ export const Result1 = new Result({
     title: "SchoolSync",
     description: SchoolSyncDescription,
     skills: "Android, Java, Kotlin, Flutter, Dart, Firebase, MySQL, XML, Markdown",
-    imageSrc: SchoolSync1,
+    imageSrc: SchoolSyncImg1,
 });
 
 export const Result2 = new Result({
