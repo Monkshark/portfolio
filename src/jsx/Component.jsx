@@ -96,6 +96,7 @@ function ContactCard({ title, description }) {
 function ResultCard({ result }) {
     return (
         <div className="mx-auto max-w-md rounded-lg bg-white dark:bg-gray-800 shadow-md p-4">
+            <img src={result.imageSrc} alt={result.title} className="w-full h-64 object-cover rounded-t-lg rounded-bl-lg rounded-br-lg"/>
             <h3 className="text-xl font-bold text-gray-800 dark:text-white">{result.title}</h3>
             <p className="text-gray-600 dark:text-gray-300 mt-2">{result.description}</p>
             <h4 className="mt-2 text-lg font-bold text-gray-800 dark:text-white">Skills Used:</h4>
@@ -103,6 +104,7 @@ function ResultCard({ result }) {
         </div>
     );
 }
+
 
 export default function Component() {
     return (
