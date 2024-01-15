@@ -93,10 +93,40 @@ function ContactCard({ title, description }) {
     );
 }
 
+
+
 function ResultCard({ result }) {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const handleNext = () => {
+        setCurrentImageIndex((prevIndex) => prevIndex + 1);
+    };
+
+    const handlePrev = () => {
+        setCurrentImageIndex((prevIndex) => prevIndex - 1);
+    };
+
     return (
         <div className="mx-auto max-w-md rounded-lg bg-white dark:bg-gray-800 shadow-md p-4">
-            <img src={result.imageSrc} alt={result.title} className="w-full h-64 object-cover rounded-t-lg rounded-bl-lg rounded-br-lg"/>
+            <div className="image-container">
+                {result.imageSrc.length > 1 && (
+                    <button onClick={handlePrev} className="image-button prev">&lt;</button>
+                )}
+                <div style={{
+                    transform: `translateX(-${currentImageIndex * 100}%)`,
+                    display: 'flex',
+                    transition: 'transform 0.3s ease-in-out'
+                }}>
+                    {result.imageSrc.map((src, index) => (
+                        <img key={index} src={src} alt={result.title}
+                            className="w-full h-64 object-cover rounded-t-lg rounded-bl-lg rounded-br-lg image"/>
+                    ))}
+                </div>
+
+                {result.imageSrc.length > 1 && currentImageIndex < result.imageSrc.length - 1 && (
+                    <button onClick={handleNext} className="image-button next">&gt;</button>
+                )}
+            </div>
             <h3 className="text-xl font-bold text-gray-800 dark:text-white">{result.title}</h3>
             <p className="text-gray-600 dark:text-gray-300 mt-2">{result.description}</p>
             <h4 className="mt-2 text-lg font-bold text-gray-800 dark:text-white">Skills Used:</h4>
@@ -106,13 +136,15 @@ function ResultCard({ result }) {
 }
 
 
+
+
 export default function Component() {
     return (
         <main key="1" className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 rounded-lg">
             <header
                 className="flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-800 shadow-md rounded-t-lg"
-                style={{position: 'sticky', top: 0, zIndex: 100}}
-            >
+                style={{position: 'sticky', top: 0, zIndex: 100}}>
+
                 <div className="text-2xl font-bold text-gray-800 dark:text-white font-[NIXGONM-vb]">추희도 포트폴리오</div>
                 <nav className="space-x-4">
                     <LinkCard to="About"/>
@@ -124,8 +156,8 @@ export default function Component() {
 
             <section
                 className="flex flex-col items-start justify-center py-20 bg-gray-100 dark:bg-gray-900 rounded-lg"
-                id="about"
-            >
+                id="about">
+
                 <h2 className="text-4xl font-bold text-gray-800 dark:text-white self-center">About Me</h2>
                 <div className="mt-8 flex items-start">
                     <div className="flex flex-col items-center text-left mr-8 px-28">
@@ -153,8 +185,7 @@ export default function Component() {
 
             <section
                 className="flex flex-col items-center justify-center py-20 bg-white dark:bg-gray-800 rounded-lg"
-                id="skills"
-            >
+                id="skills">
                 <h2 className="text-3xl font-bold text-gray-800 dark:text-white">Programming Skills</h2>
                 <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-8">Language</h3>
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-8">
@@ -204,8 +235,7 @@ export default function Component() {
             </section>
             <section
                 className="flex flex-col items-center justify-center py-20 bg-gray-100 dark:bg-gray-900 rounded-lg"
-                id="results"
-            >
+                id="results">
                 <h2 className="text-4xl font-bold text-gray-800 dark:text-white">Results</h2>
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                     <ResultCard
@@ -223,7 +253,10 @@ export default function Component() {
                 <h2 className="text-4xl font-bold text-gray-800 dark:text-white">Contact</h2>
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
                     <ContactCard title="Phone" description={Phone}/>
-                    <ContactCard title="Instagram" description={Instagram}/>
+                    <div className="flex flex-col items-center text-center">
+                        <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Instagram</h3>
+                        <a href={`https://www.instagram.com/${Instagram}`} className="mt-2 text-gray-600 dark:text-gray-300">{`@${Instagram}`}</a>
+                    </div>
                     <ContactCard title="Email" description={Email}/>
 
                 </div>

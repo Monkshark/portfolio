@@ -18,3 +18,40 @@
     min-width: max-content;
     z-index: 9999;
 }
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    margin: 0 auto;
+}
+
+.image-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-button.prev {
+    left: 10px;
+}
+
+.image-button.next {
+    right: 10px;
+}
